@@ -3,10 +3,15 @@
 #include <stdbool.h>
 #include <locale.h>
 
-void main (void)
+int main ()
 {
     setlocale(LC_ALL, "Portuguese");
 
+    void CadastroPratos(void);
+    void RemocaoPratos(void);
+    void BuscaPratos(void);
+    void ListaPratos(void);
+    void RegistraPedido(void);
 
 
     bool loop = true;
@@ -14,7 +19,7 @@ void main (void)
         int decisao = 0;
         printf("Seja bem vindo ao nosso sistema! O que deseja fazer?\n");
         printf("1 - Cadastro de Pratos\n");
-        printf("2 - Remoção de Pratos\n");
+        printf("2 - Remocao de Pratos\n");
         printf("3 - Busca de Pratos\n");
         printf("4 - Listagem de Pratos\n");
         printf("5 - Registrar um pedido\n");
@@ -55,4 +60,6 @@ void main (void)
             break;
         }
     } while (loop);
+
+    return 0;
 }
