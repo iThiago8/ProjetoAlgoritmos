@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <locale.h>
+#include "BuscaPratos.c"
+#include "ListaPratos.c"
 
 int main ()
 {
@@ -30,23 +32,23 @@ int main ()
         switch (decisao)
         {
             case 1:
-                
+                ;
             break;
         
             case 2:
-                /* code */
+                ;
             break;
 
             case 3:
-                /* code */
+                BuscaPratos();
             break;
 
             case 4:
-                /* code */
+                ;
             break;
 
             case 5:
-                /* code */
+                ;
             break;
 
             case 0:
