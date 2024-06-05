@@ -4,13 +4,15 @@
 #include <locale.h>
 #include "BuscaPratos.c"
 #include "ListaPratos.c"
+#include "cadastroPratos.c"
+#include "removerPratos.c"
 
 int main ()
 {
     setlocale(LC_ALL, "Portuguese");
 
     void CadastroPratos(void);
-    void RemocaoPratos(void);
+    void RemoverPratos(void);
     void BuscaPratos(void);
     void ListaPratos(void);
     void RegistraPedido(void);
@@ -32,11 +34,11 @@ int main ()
         switch (decisao)
         {
             case 1:
-                ;
+                CadastroPratos();
             break;
         
             case 2:
-                ;
+                RemoverPratos();
             break;
 
             case 3:
@@ -44,11 +46,11 @@ int main ()
             break;
 
             case 4:
-                ;
+                ListaPratos();
             break;
 
             case 5:
-                ;
+                RegistraPedido();
             break;
 
             case 0:
