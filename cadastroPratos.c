@@ -5,7 +5,10 @@
 
 void CadastroPratos(void)
 {
-
+    extern char pratos[10][50];
+    extern char descricao[10][300];
+    extern float preco[10];
+    
     char nome[10][50] = {"Ajuste", "Sorvete", 0, 0, 0, 0, 0, 0, 0, 0};          // Inicializo o vetor com valores prédefinidos
     char descricao[10][300] = {"Ajuste", "Bem gelado", 0, 0, 0, 0, 0, 0, 0, 0}; // Ajuste é para começar a mostrar os pratos na posição 1
     float preco[10] = {1, 19.90, 0, 0, 0, 0, 0, 0, 0, 0};
