@@ -13,15 +13,16 @@ void ListaPratos(void)
 
     printf("\n");
     printf("*************\n");
-    printf("LISTAR nome\n");
+    printf("LISTAR PRATOS\n");
     printf("*************\n");
     printf("\n");
 
-    for (int i = 0; i < tamanhoArrayNome; i++)
+    for (int i = 1; i < tamanhoArrayNome; i++)
     {
-        printf("Nome do prato %d: %s\n", (i + 1), nome[i]);
-        printf("Descricao do prato %d: %s\n", (i + 1), descricao[i]);
-        printf("Preco do prato %d: %.2f\n", (i + 1), preco[i]);
+        printf("PRATO NUMERO %d\n", (i));
+        printf("Nome do prato %d: %s\n", (i), nome[i]);
+        printf("Descricao do prato %d: %s\n", (i), descricao[i]);
+        printf("Preco do prato %d: %.2f\n", (i), preco[i]);
         printf("--------------------------------------\n");
 
     }
