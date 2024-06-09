@@ -6,9 +6,10 @@
 void RemoverPratos(void)
 {
 
-    char nome[10][50] = {"Ajuste", "Sorvete", "Banana queimada", "Arroz carreteiro", "", "", "", "", "", ""}; // Inicializo o vetor bidimensional com valores prédefinidos para que não haja lixo da memória no buffer
-    char descricao[10][300] = {"Ajuste", "Bem gelado", "Banana da natureza queimada em 30 graus celsius", "Arroz que tem de tudo", 0, 0, 0, 0, 0, 0}; // Ajuste é para começar a mostrar os pratos na posição 1
-    float preco[10] = {1, 19.90, 29.90, 0, 0, 0, 0, 0, 0, 0};
+    extern char pratos[10][50];
+    extern char descricao[10][300];
+    extern float preco[10];
+
     bool repeat = true; 
     int i, j, excluir, resp;
 
@@ -17,9 +18,9 @@ void RemoverPratos(void)
 
         for (i = 1; i < 10; i++) // Mostra todos os pratos disponíveis
         {
-            if (strlen(nome[i]) != "") // Verifica se naquela posição possui caracter, se possuir mostra o conteúdo, evitando mostrar campos vazios
+            if (strlen(pratos[i]) != 0) // Verifica se naquela posição possui caracter, se possuir mostra o conteúdo, evitando mostrar campos vazios
             {
-                printf("\nPrato numero %d: %s\n", i, nome[i]);
+                printf("\nPrato numero %d: %s\n", i, pratos[i]);
             }
         }
 
@@ -32,9 +33,9 @@ void RemoverPratos(void)
             {
                 for (j = 0; j < 300; j++) // Laço para percorrer todas as colunas da string
                 {
-                    nome[i][j] = '\0'; // Este símbolo é utilizado para zerar caracteres (Caracatere nulo)
+                    pratos[i][j] = '\0'; // Este símbolo é utilizado para zerar caracteres (Caracatere nulo)
                     descricao[i][j] = '\0'; 
-                    preco[i] = '0.0';       // Aqui é utilizado o 0.0 para zerar valores numéricos
+                    preco[i] = '0.0';  // Aqui é utilizado o 0.0 para zerar valores numéricos
                     
                     break;
                 }
@@ -43,9 +44,9 @@ void RemoverPratos(void)
 
         for (i = 1; i < 10; i++) // Mostra todos os pratos disponíveis
         {
-            if (strlen(nome[i]) != 0) // Verifica se naquela posição possui caracter, se possuir mostra o conteúdo, evitando mostrar campos vazios
+            if (strlen(pratos[i]) != 0) // Verifica se naquela posição possui caracter, se possuir mostra o conteúdo, evitando mostrar campos vazios
             {
-                printf("\nPrato numero %d: %s\n", i, nome[i]);
+                printf("\nPrato numero %d: %s\n", i, pratos[i]);
             }
         }
 
@@ -69,9 +70,3 @@ void RemoverPratos(void)
         } while (resp != 1 && resp != 2);
     }
 }
-
-// int main()
-// {
-//     removerPratos(); // Chama a função removerPratos dentro da main pois é necessário ter uma main no código
-//     return 0;
-// }
