@@ -3,12 +3,13 @@
 #include <string.h>
 #include <stdbool.h>
 
-void CadastroPratos(void)
-{
+char nome[10][50] = {"Ajuste", "Sorvete", 0, 0, 0, 0, 0, 0, 0, 0};          // Inicializo o vetor com valores prédefinidos
+char descricao[10][300] = {"Ajuste", "Bem gelado", 0, 0, 0, 0, 0, 0, 0, 0}; // Ajuste é para começar a mostrar os pratos na posição 1
+float preco[10] = {1, 19.90, 0, 0, 0, 0, 0, 0, 0, 0};
 
-    char nome[10][50] = {"Ajuste", "Sorvete", 0, 0, 0, 0, 0, 0, 0, 0};          // Inicializo o vetor com valores prédefinidos
-    char descricao[10][300] = {"Ajuste", "Bem gelado", 0, 0, 0, 0, 0, 0, 0, 0}; // Ajuste é para começar a mostrar os pratos na posição 1
-    float preco[10] = {1, 19.90, 0, 0, 0, 0, 0, 0, 0, 0};
+void CadastroPratos(void)
+{    
+
     bool repeat = true;
     int i, resp;
 

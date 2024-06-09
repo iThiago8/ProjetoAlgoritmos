@@ -6,6 +6,7 @@
 #include "ListaPratos.c"
 #include "cadastroPratos.c"
 #include "removerPratos.c"
+#include "registraPedido.c"
 
 int main ()
 {
