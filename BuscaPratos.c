@@ -19,16 +19,16 @@ void Str_minuscula(char *strMinuscula, const char *strOriginal)
 
 void BuscaPorNome(void)
 {
-    char pratos[50][100] = {"Macarrao", "Sopa", "Arroz e feijao", "Arroz seco"};
-    char descricao[50][100] = {"gelado", "quente", "cru", "quentinho"};
-    char precos[50][100] = {"14,25", "13,00", "12,34", "69,23"};
+    extern char nome[10][50];
+    extern char descricao[10][300];
+    extern float preco[10];
 
     char busca[100];
 
     printf("Digite o nome que deseja encontrar: ");
     scanf("%s", busca);
 
-    int tamanhoArray = (sizeof(pratos) / sizeof(pratos[0]));
+    int tamanhoArray = (sizeof(nome) / sizeof(nome[0]));
     bool pratoEncontrado = false;
 
     for (int i = 0; i < tamanhoArray; i++)
@@ -36,15 +36,15 @@ void BuscaPorNome(void)
         char pratosMinusculo[100];
         char buscaMinuscula[100];
 
-        Str_minuscula(pratosMinusculo, pratos[i]);
+        Str_minuscula(pratosMinusculo, nome[i]);
         Str_minuscula(buscaMinuscula, busca);
 
         if (strstr(pratosMinusculo, buscaMinuscula) != NULL)
         {
             printf("Pratos encontrados:\n");
-            printf("Nome: %s\n", pratos[i]);
+            printf("Nome: %s\n", nome[i]);
             printf("Descricao: %s\n", descricao[i]);
-            printf("Preco: %s\n", precos[i]);
+            printf("Preco: %.2f\n", preco[i]);
             printf("----------------------------\n");
             pratoEncontrado = true;
         }
@@ -89,9 +89,9 @@ void BuscaPorNome(void)
 
 void BuscaPorDescricao(void)
 {
-    char pratos[50][100] = {"Macarrao", "Sopa", "Arroz e feijao", "Arroz seco"};
-    char descricao[50][100] = {"gelado", "quente", "cru", "quentinho"};
-    char precos[50][100] = {"14,25", "13,00", "12,34", "69,23"};
+    extern char nome[10][50];
+    extern char descricao[10][300];
+    extern float preco[10];
 
     char busca[100];
 
@@ -112,9 +112,9 @@ void BuscaPorDescricao(void)
         if (strstr(descricaoMinuscula, buscaMinuscula) != NULL)
         {
             printf("Pratos encontrados:\n");
-            printf("Nome: %s\n", pratos[i]);
+            printf("Nome: %s\n", nome[i]);
             printf("Descricao: %s\n", descricao[i]);
-            printf("Preco: %s\n", precos[i]);
+            printf("Preco: %.2f\n", preco[i]);
             printf("----------------------------\n");
             pratoEncontrado = true;
         }
