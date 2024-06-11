@@ -5,7 +5,7 @@
 
 void RemoverPratos(void)
 {
-
+    //Utilizado o extern para acessar as variáveis globais criadas
     extern char pratos[10][50];
     extern char descricao[10][300];
     extern float preco[10];
