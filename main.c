@@ -1,10 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <locale.h>
+#include <stdio.h> //Biblioteca de entrada e saída simples
+#include <stdlib.h> //Biblioteca de funções padrões da linguagem C (strlen, strstr, strcopy e etc...)
+#include <stdbool.h> //Biblioteca que permite utilizar o tipo booleano das variáveis
+//Todos os "#include" abaixo com os arquivos .c permitem nós fazermos a utilização da função de cada arquivo 
 #include "BuscaPratos.c"
 #include "ListaPratos.c"
-#include "cadastroPratos.c"
+#include "cadastroPratos.c" 
 #include "removerPratos.c"
 #include "registraPedido.c"
 
@@ -22,7 +22,12 @@ int main ()
     bool loop = true;
     do {
         int decisao = 0;
-        printf("Seja bem vindo ao nosso sistema! O que deseja fazer?\n");
+        //Interface inicial do programa
+        printf("=================================================================");
+        printf("\n=============== Gabriel e Thiago - Restaurante ==================");
+        printf("\n=================================================================");
+        printf("\nSeja bem vindo ao nosso sistema! O que deseja fazer?");
+        printf("\n=================================================================\n");
         printf("1 - Cadastro de Pratos\n");
         printf("2 - Remocao de Pratos\n");
         printf("3 - Busca de Pratos\n");
@@ -32,6 +37,7 @@ int main ()
 
         scanf ("%d", &decisao);
 
+        //É feito um switch case para chamar a função de cada arquivo de acordo com o número digitado pelo usuário anteriormente
         switch (decisao)
         {
             case 1:
@@ -60,7 +66,7 @@ int main ()
         
             
             default:
-                printf("Opção escolhida inválida! Por favor tente novamente");
+                printf("Opcao escolhida invalida! Por favor tente novamente");
                 loop = true;
             break;
         }
