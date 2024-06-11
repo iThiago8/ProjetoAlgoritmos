@@ -3,14 +3,15 @@
 #include <string.h>
 #include <stdbool.h>
 
-char pratos[10][50] = {"Ajuste", "Sorvete", "", "", "", "", "", "", "", ""};          // Inicializo o vetor com valores prédefinidos
-char descricao[10][300] = {"Ajuste", "Bem gelado", "", "", "", "", "", "", "", ""}; // Ajuste é para começar a mostrar os pratos na posição 1
-float preco[10] = {1, 19.90, 0, 0, 0, 0, 0, 0, 0, 0};
-
+//Cria a função para limpar o caractere de nova linha para que não interfira nos getchar, fgets e nas outras leituras de entrada utilizadas
 void limpaBufferDeEntrada() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF) { }
 }
+
+char pratos[10][50] = {"Ajuste", "Sorvete", 0, 0, 0, 0, 0, 0, 0, 0};          // Inicializo o vetor com valores prédefinidos
+char descricao[10][300] = {"Ajuste", "Bem gelado", "", "", "", "", "", "", "", ""}; // Ajuste é para começar a mostrar os pratos na posição 1
+float preco[10] = {1, 19.90, 0, 0, 0, 0, 0, 0, 0, 0};
 
 void CadastroPratos(void)
 {
