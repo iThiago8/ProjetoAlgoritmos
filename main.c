@@ -36,6 +36,8 @@ int main ()
         printf("0 - SAIR\n");
 
         scanf ("%d", &decisao);
+        
+
 
         //É feito um switch case para chamar a função de cada arquivo de acordo com o número digitado pelo usuário anteriormente
         switch (decisao)
@@ -66,7 +68,7 @@ int main ()
         
             
             default:
-                printf("Opcao escolhida invalida! Por favor tente novamente");
+                printf("Opcao escolhida invalida! Por favor tente novamente\n");
                 loop = true;
             break;
         }

@@ -29,4 +29,8 @@ void ListaPratos(void)
         printf("--------------------------------------\n");
         }
     }
+
+    limpaBufferDeEntrada(); //Chama a função para limpar o caractere de nova linha
+    printf("Pressione enter para voltar ao menu inicial\n");
+    getchar();
 }
