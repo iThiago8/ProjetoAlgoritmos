@@ -28,7 +28,7 @@ void BuscaPorNome(void)
 
     char busca[100];
 
-    printf("Digite o pratos que deseja encontrar: ");
+    printf("Digite o prato que deseja encontrar: ");
     scanf("%s", busca);
 
     int tamanhoArray = (sizeof(pratos) / sizeof(pratos[0])); //Faz com que o tamanho da array seja variável, dependendo de quantos pratos existe

@@ -73,16 +73,6 @@ void CadastroPratos(void)
             }
         }
 
-        for (i = 1; i < 10; i++) // Mostra todos os pratos disponíveis
-        {
-            if (strlen(pratos[i]) != 0) // Verifica se naquela posição possui caracter, se possuir mostra o conteúdo, evitando mostrar campos vazios
-            {
-                printf("\nPrato numero %d: %s", i, pratos[i]);
-                printf("\nDescricao %d: %s", i, descricao[i]);
-                printf("\nPreco %d: %.2f", i, preco[i]);
-            }
-        }
-
         do
         {
             printf("\n O que deseja fazer agora?\n 1 - Cadastrar outro prato \n 2 - Voltar ao menu \n");

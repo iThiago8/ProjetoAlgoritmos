@@ -17,8 +17,8 @@ void RegistraPedido(void) {
     printf("\n");
 
     printf("Aperte enter para listar os pratos cadastrados\n"); 
-    while ((c = getchar()) != '\n' && c != EOF) { }  //Apagar o caractere de nova linha (\n) para que não interfira no getchar
     getchar();
+    limpaBufferDeEntrada(); //Chama a função para limpar o caractere de nova linha
 
     ListaPratos(); //Chama a função de listagem já criada em outro arquivo
 
